@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud Application</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-style: italic;
+      }
+
+      .data {
+        height: 240px;
+        width: 80%;
+        background-color: lightgray;
+        margin-left: 10%;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .table {
+        width: 100%;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+      }
+      .details{
+      
+      }
+
+      .search {
+        margin: 20px;
+        margin-left:30%;
+        width : 120%
+      }
+      input {
+        height: 20px;
+        width : 25%;
+        text-indent: 10px;
+      }
+
+      button {
+        margin-left : 40% ;
+        width : 20%
+      }
+      .tdata{
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="data">
+      <h1>Bus Funtionality</h1>
+    <form class= "details" onsubmit="addBus(event)">
+      <fieldset>
+        <br>
+        <legend>To Add New Bus Facility</legend>
+         <label for="busName">Bus Name:</label>
+        <input type="text" required  placeholder="Bus Name" id="busName">
+        <label for="busSource">Source:</label>
+        <input type="text" required  placeholder="Starting point"id="busSource"><br><br>
+        <label for="busDestination">Destination:</label>
+        <input type="text" required  placeholder="Ending Point" id="busDestination">
+        <label for="busNumber">Bus Number:</label>
+        <input type="text" required placeholder="Bus Number" id="busNumber"><br><br>
+        <label for="busCapacity">Passenger Capacity:</label>
+        <input type="number"  required placeholder="Total no of seats" id="busCapacity"><br><br>
+        <button type="submit" >Add</button><br><br>
+        </form>
+      </fieldset>
+    </form>
+      </div>
+
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Filter by Source and Destination"
+          id="searchName"
+          onkeyup="searchByName()"
+        /><br>
+      </div>
+
+      <table class="tdata" border="1" cellspacing= "0">
+      <thead>
+        <tr>
+          <th>Sr no</th>
+          <th>Name</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Number</th>
+          <th>Passenger Capacity</th>
+        </tr>
+      <tbody class="tbody"></tbody>
+      </table>
+    </div>
+<script src="busDetails.js"></script>
+  </body>
+</html>
