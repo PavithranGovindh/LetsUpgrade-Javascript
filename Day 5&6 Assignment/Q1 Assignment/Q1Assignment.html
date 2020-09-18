@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 1</title>
+  </head>
+  <body>
+    <h1>Employee Details</h1>
+    <br>
+     
+        <input
+          type="text"
+          placeholder="Start Searching by Name/City"
+          id="search"
+          onkeyup="searchByNameAndCity()"
+        />
+     
+    <table border="1" class="table" cellspacing="0">
+      <thead>
+        <tr>
+         <th>Srno</th>
+         <th>Name</th>
+         <th>Age</th>
+         <th>City</th>
+         <th>Salary</th>
+         <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody class="tdata" id="tdata"></tbody>
+    </table>
+    <script src = "employees.js"></script>
+  </body>
+</html>
+
